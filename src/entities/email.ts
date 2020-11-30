@@ -10,7 +10,7 @@ export class Email {
     if (local.length > 64 || local.length === 0) {
       return false
     }
-    if (domain.length > 255) {
+    if (domain.length > 255 || domain.length === 0) {
       return false
     }
     return true
