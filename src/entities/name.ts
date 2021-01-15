@@ -10,7 +10,7 @@ export class Name {
 
   public static create (name: string): Either<InvalidNameError, Name> {
     if (!Name.validate(name)) {
-      return left(new InvalidNameError())
+      return left(new InvalidNameError(name))
     }
 
     return right(new Name(name))
