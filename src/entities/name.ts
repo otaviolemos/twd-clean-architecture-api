@@ -1,5 +1,5 @@
-import { left, right, Either } from '../shared'
-import { InvalidNameError } from './errors'
+import { left, right, Either } from '@/shared'
+import { InvalidNameError } from '@/entities/errors'
 
 export class Name {
   public readonly value: string
