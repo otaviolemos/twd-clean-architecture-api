@@ -30,5 +30,9 @@
     "lint-staged": "^10.5.1",
     "ts-jest": "^26.4.3",
     "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.11",
+    "express": "^4.17.1"
   }
 }
