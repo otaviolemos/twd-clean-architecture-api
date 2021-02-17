@@ -40,7 +40,8 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "module-alias": "^2.2.2"
+    "module-alias": "^2.2.2",
+    "mongodb": "^3.6.4"
   },
   "_moduleAliases": {
     "@": "dist"
