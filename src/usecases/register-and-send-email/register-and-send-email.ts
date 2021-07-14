@@ -4,7 +4,7 @@ import { UseCase } from '@/usecases/ports'
 import { User, UserData } from '@/entities'
 import { Either, left, right } from '@/shared'
 import { InvalidEmailError, InvalidNameError } from '@/entities/errors'
-import { MailServiceError } from '../errors'
+import { MailServiceError } from '@/usecases/errors'
 
 export class RegisterAndSendEmail implements UseCase {
   private registerUserOnMailingList: RegisterUserOnMailingList
