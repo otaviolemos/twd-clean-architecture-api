@@ -3,3 +3,4 @@ dist
 coverage
 globalConfig.json
 todo
+.env
