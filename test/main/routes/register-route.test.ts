@@ -22,9 +22,9 @@ describe('Register route', () => {
     await request(app)
       .post('/api/register')
       .send({
-        name: 'Any name',
-        email: 'any@mail.com'
+        name: 'Otávio Lemos',
+        email: 'otaviolemos@thewisedev.com.br'
       })
-      .expect(201)
-  })
+      .expect(200)
+  }, 20000)
 })
