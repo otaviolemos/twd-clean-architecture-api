@@ -22,8 +22,8 @@ describe('Register route', () => {
     await request(app)
       .post('/api/register')
       .send({
-        name: 'Otávio Lemos',
-        email: 'otaviolemos@thewisedev.com.br'
+        name: 'Any Name',
+        email: 'any@mail.com'
       })
       .expect(200)
   }, 20000)
