@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx --no-install eslint --fix && npx --no-install jest --passWithNoTests --runInBand
