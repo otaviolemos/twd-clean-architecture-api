@@ -1,12 +1,6 @@
 import { UserData } from '@/entities'
 import { UserRepository } from '@/usecases/register-user-on-mailing-list/ports'
 import { MongoHelper } from './helper'
-import { WithId } from 'mongodb'
-
-interface MongodbUser extends WithId<Document> {
-  name: string,
-  email: string
-}
 
 export class MongodbUserRepository implements UserRepository {
   async add (user: UserData): Promise<void> {
@@ -29,7 +23,7 @@ export class MongodbUserRepository implements UserRepository {
 
   async findAllUsers (): Promise<UserData[]> {
     const userCollection = MongoHelper.getCollection('users')
-    return await userCollection.find().toArray() as MongodbUser[]
+    return await userCollection.find<UserData>({}).toArray()
   }
 
   async exists (user: UserData): Promise<boolean> {
